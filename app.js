@@ -55,6 +55,12 @@ app.post("/compose", function(req, res){
 })
 
 
+app.post("/delete", function(req, res){
+  posts.splice(req.body.id, 1)
+  res.redirect("/")
+})
+
+
 //----- Start Server -----
 app.listen(3000, function() {
   console.log("Server started on port 3000");

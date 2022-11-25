@@ -3,4 +3,8 @@
 <h1><%= posts[postIndex].title %></h1>
 <p><%= posts[postIndex].content %></p>
 
+<form action="/delete" method="post">
+    <button type="submit" value="<%= postIndex %>" style="display:inline">Delete</button>
+</form>
+
 <%- include partials/footer %>
