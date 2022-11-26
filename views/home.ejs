@@ -5,10 +5,10 @@
 <p> <%= homeStartingContent %> </p>
 
 <% posts.forEach(function(post) {%>
-    <a href="/posts/<%= posts.indexOf(post) %>"><h1><%= post.title %></h1></a> 
+    <a href="/posts/<%= post._id %>"><h1><%= post.title %></h1></a> 
 
     <% if (post.content.length > 100) { %>
-            <p><%= post.content.substring(1, 100) + "..." %> <a href="/posts/<%= posts.indexOf(post) %>">Read Mode</a> </p>
+            <p><%= post.content.substring(1, 100) + "..." %> <a href="/posts/<%= post._id %>">Read Mode</a> </p>
     <% } else { %>
         <p><%= post.content %></p>
     <% } %>
